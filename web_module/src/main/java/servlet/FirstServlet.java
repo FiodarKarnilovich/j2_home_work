@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "first_servlet", urlPatterns = "/first_servlet")
-public class first_servlet extends HttpServlet {
+@WebServlet(name = "FirstServlet", urlPatterns = "/first_servlet")
+public class FirstServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
