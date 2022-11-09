@@ -1,6 +1,5 @@
-package my.sql.ex4;
+package my.sql.ex4_5;
 
-import java.awt.*;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -54,7 +53,7 @@ public class Exps implements Serializable {
 
     @Override
     public String toString() {
-        return "Exps{" +
+        return "{" +
                 "id=" + id +
                 ", date='" + date + '\'' +
                 ", store='" + store + '\'' +

@@ -1,6 +1,6 @@
-package my.sql.ex4;
+package my.sql.ex4_5;
 
-import my.sql.ex4.dao.ExpsDaoImpl;
+import my.sql.ex4_5.dao.ExpsDaoImpl;
 
 import java.util.List;
 

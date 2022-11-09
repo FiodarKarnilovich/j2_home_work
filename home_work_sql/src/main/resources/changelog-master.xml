@@ -14,5 +14,27 @@
             PRIMARY KEY (`id`));
         </sql>
     </changeSet>
+    <changeSet id="2" author="sourness1979@gmail.com">
+        <sql>
+            CREATE TABLE if not exists `receiver` (
+            `id` INT NOT NULL,
+            `store` VARCHAR(255) NULL,
+            PRIMARY KEY (`id`));
+        </sql>
+    </changeSet>
 
+    <changeSet id="3" author="sourness1979@gmail.com">
+        <sql>
+            CREATE TABLE if not exists `expense` (
+            `id` INT NOT NULL,
+            `date` VARCHAR(255) NULL,
+            `id_store` INT NOT NULL,
+            `sum` DOUBLE,
+            PRIMARY KEY (`id`)),
+            CONSTRAINT id_store
+            FOREIGN KEY (id_store)
+            REFERENCES receiver (id)
+            );
+        </sql>
+    </changeSet>
 </databaseChangeLog>
