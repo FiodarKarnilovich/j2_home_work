@@ -11,7 +11,8 @@
             `date` VARCHAR(255) NULL,
             `store` VARCHAR(255) NULL,
             `sum` DOUBLE NULL,
-            PRIMARY KEY (`id`));
+            PRIMARY KEY (`id`)
+            );
         </sql>
     </changeSet>
     <changeSet id="2" author="sourness1979@gmail.com">
@@ -19,7 +20,8 @@
             CREATE TABLE if not exists `receiver` (
             `id` INT NOT NULL,
             `store` VARCHAR(255) NULL,
-            PRIMARY KEY (`id`));
+            PRIMARY KEY (`id`)
+            );
         </sql>
     </changeSet>
 
@@ -30,10 +32,10 @@
             `date` VARCHAR(255) NULL,
             `id_store` INT NOT NULL,
             `sum` DOUBLE,
-            PRIMARY KEY (`id`)),
-            CONSTRAINT id_store
+            PRIMARY KEY (`id`),
+            CONSTRAINT `id`
             FOREIGN KEY (id_store)
-            REFERENCES receiver (id)
+            REFERENCES `receiver` (`id`)
             );
         </sql>
     </changeSet>

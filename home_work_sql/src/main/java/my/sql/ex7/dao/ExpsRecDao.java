@@ -8,11 +8,13 @@ import java.util.List;
 public interface ExpsRecDao {
 
     Receiver getReceiver(int num);
-    List<Receiver> getReceiver();
+       List<Receiver> getReceivers();
+
     Expense getExpense(int num);
     List<Expense> getExpenses();
-    int addReceiver(Receiver receiver);
-    int addExpense(Expense expense);
+    void addReceiver(Receiver receiver);
+    void addExpense(Expense expense);
+
 
 
 }

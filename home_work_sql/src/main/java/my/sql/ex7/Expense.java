@@ -50,4 +50,14 @@ public class Expense implements Serializable {
     public void setSum(Double sum) {
         this.sum = sum;
     }
+
+    @Override
+    public String toString() {
+        return "Expense{" +
+                "id=" + id +
+                ", date='" + date + '\'' +
+                ", store_id=" + store_id +
+                ", sum=" + sum +
+                '}';
+    }
 }

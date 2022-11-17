@@ -30,4 +30,12 @@ public class Receiver implements Serializable {
     public void setStore(String store) {
         this.store = store;
     }
+
+    @Override
+    public String toString() {
+        return "Receiver{" +
+                "id=" + id +
+                ", store='" + store + '\'' +
+                '}';
+    }
 }
