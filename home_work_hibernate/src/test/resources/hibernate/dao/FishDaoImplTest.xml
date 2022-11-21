@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <Fish id="1"  name="dorado" price="28.0"/>
+    <Fish id="2"  name="seabass" price="28.0"/>
+    <Fish id="3"  name="karas" price="5.0"/>
+    <Fish id="4"  name="cod" price="34.9"/>
+    <Fish id="5"  name="bass" price="25.0"/>
+</dataset>
