@@ -55,15 +55,16 @@ public class FishDaoImplTest extends BaseDaoTest {
         int sizeNewTable = resultSet.getInt(1);
         assertEquals(1, sizeNewTable);
 
+        connection.close();
     }
 
     @Test
     @SneakyThrows
     public void delete(){
 
-        IDataSet personDataSet = new FlatXmlDataSetBuilder()
+        IDataSet fishDataSet = new FlatXmlDataSetBuilder()
                 .build(getClass().getResourceAsStream("FishDaoImplTest.xml"));
-        DatabaseOperation.CLEAN_INSERT.execute(iDatabaseConnection, personDataSet);
+        DatabaseOperation.CLEAN_INSERT.execute(iDatabaseConnection, fishDataSet);
 
         List<Fish> listFish = new ArrayList<>();
         for (int i = 1; i < 6; i++) {
@@ -77,6 +78,9 @@ public class FishDaoImplTest extends BaseDaoTest {
         int sizeNewTable = resultSet.getInt(1);
         assertEquals(0, sizeNewTable);
 
+        DatabaseOperation.DELETE_ALL.execute(iDatabaseConnection, fishDataSet);
+
+        connection.close();
     }
 
     @Test
@@ -101,19 +105,22 @@ public class FishDaoImplTest extends BaseDaoTest {
         int sizeNewTable = resultSet.getInt(1);
         assertEquals(sizeOldTable, sizeNewTable);
 
+        connection.close();
     }
 
 
     @Test
     @SneakyThrows
     public void testSearch() {
-        IDataSet personDataSet = new FlatXmlDataSetBuilder()
+        IDataSet fishDataSet = new FlatXmlDataSetBuilder()
                 .build(getClass().getResourceAsStream("FishDaoImplTest.xml"));
-        DatabaseOperation.CLEAN_INSERT.execute(iDatabaseConnection, personDataSet);
+        DatabaseOperation.CLEAN_INSERT.execute(iDatabaseConnection, fishDataSet);
 
 
         Fish fish = targetObject.search(2);
-        assertEquals("seabass", fish.getName());
+        assertEquals("seabass".toUpperCase(), fish.getName());
+
+        DatabaseOperation.DELETE_ALL.execute(iDatabaseConnection, fishDataSet);
 
 
     }

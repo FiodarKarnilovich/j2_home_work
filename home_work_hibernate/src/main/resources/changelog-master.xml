@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet id="1" author="soutness1979@gmail.com">
+    <changeSet id="1" author="sourness1979@gmail.com">
         <sql>
             CREATE TABLE if not exists `fish` (
             `id` INT NOT NULL,
@@ -16,13 +16,21 @@
         </sql>
     </changeSet>
 
-    <changeSet id="2" author="soutness1979@gmail.com">
+    <changeSet id="2" author="sourness1979@gmail.com">
         <sql>
-            create table hibernate_sequence (
+            create table if not exists hibernate_sequence (
             next_val bigint
             );
 
             INSERT INTO hibernate_sequence VALUES (1);
+        </sql>
+    </changeSet>
+
+    <changeSet id="3" author="sourness1979@gmail.com">
+        <sql>
+            CREATE TRIGGER fish_insert BEFORE INSERT
+            ON `fish` FOR EACH ROW
+            SET new.name = UPPER(new.name);
         </sql>
     </changeSet>
 
