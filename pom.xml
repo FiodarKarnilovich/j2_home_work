@@ -12,6 +12,7 @@
         <module>web_module</module>
         <module>home_work_sql</module>
         <module>home_work_hibernate</module>
+        <module>home_work_orm</module>
     </modules>
 
     <properties>
