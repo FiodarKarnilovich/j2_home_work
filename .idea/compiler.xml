@@ -18,6 +18,7 @@
           <entry name="$PROJECT_DIR$/../../Java/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" />
         </processorPath>
         <module name="home_work_orm" />
+        <module name="home_work_spring" />
         <module name="home_work_hibernate" />
       </profile>
     </annotationProcessing>
