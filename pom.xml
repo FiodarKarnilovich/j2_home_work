@@ -14,6 +14,7 @@
         <module>home_work_hibernate</module>
         <module>home_work_orm</module>
         <module>home_work_spring</module>
+        <module>home_work_spring_hibernate</module>
     </modules>
 
     <properties>
@@ -22,13 +23,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <profiles>
-<!--        <profile>-->
-<!--            <id>backend</id>-->
-<!--            <modules>-->
-<!--                <module>web_module</module>-->
-<!--            </modules>-->
-
-<!--        </profile>-->
         <profile>
             <id>all</id>
             <modules>
