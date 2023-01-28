@@ -1,10 +1,10 @@
 package orm.load;
 
 import orm.dao.ClothesDaoImpl;
-import orm.entity.Jacket;
-import orm.entity.JacketDescription;
-import orm.entity.Pants;
-import orm.entity.PantsDescription;
+import orm.entity_ex6_7.Jacket;
+import orm.entity_ex6_7.JacketDescription;
+import orm.entity_ex6_7.Pants;
+import orm.entity_ex6_7.PantsDescription;
 
 public class Main {
 

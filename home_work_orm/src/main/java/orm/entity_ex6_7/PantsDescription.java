@@ -1,4 +1,4 @@
-package orm.entity;
+package orm.entity_ex6_7;
 
 
 import lombok.AllArgsConstructor;

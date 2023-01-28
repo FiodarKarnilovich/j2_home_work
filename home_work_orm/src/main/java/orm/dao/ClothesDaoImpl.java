@@ -4,8 +4,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import orm.config.HibernateConfig;
-import orm.entity.Jacket;
-import orm.entity.Pants;
+import orm.entity_ex6_7.Jacket;
+import orm.entity_ex6_7.Pants;
 
 public class ClothesDaoImpl implements ClothesDao {
 
@@ -66,6 +66,7 @@ public class ClothesDaoImpl implements ClothesDao {
         }
         return pants;
     }
+
 
 
 }

@@ -1,7 +1,7 @@
 package orm.dao;
 
-import orm.entity.Jacket;
-import orm.entity.Pants;
+import orm.entity_ex6_7.Jacket;
+import orm.entity_ex6_7.Pants;
 
 public interface ClothesDao<T> {
 
